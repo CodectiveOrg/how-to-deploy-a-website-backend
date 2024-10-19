@@ -12,7 +12,7 @@ jobs:
 
             - name: Delete Previous Process Silently
               continue-on-error: true
-              run: pm2 delete "this-is-a-name"
+              run: pm2 delete this-is-a-name
 
             - name: Install Dependencies
               run: npm i
@@ -21,7 +21,7 @@ jobs:
               run: npm run build
 
             - name: Start a New Process
-              run: pm2 start node build/main.js --name this-is-a-name
+              run: pm2 start build/main.js --name this-is-a-name
 
             - name: Save Current Process List
               run: pm2 save
