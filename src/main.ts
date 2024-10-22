@@ -9,7 +9,7 @@ async function main(): Promise<void> {
     app.use(cors());
 
     app.get('/', (req, res) => {
-        res.send('Hello, friend!');
+        res.send('Hello, server!');
     });
 
     app.listen(PORT, () => {
